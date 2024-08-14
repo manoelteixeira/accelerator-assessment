@@ -103,7 +103,6 @@ animes.put("/:id", validateName, validateDescription, async (req, res) => {
     res.status(200).json(anime);
   } catch (error) {
     if (error.received == 0) {
-      // res.status(404).json({ error: "Anime not found" });
       res.status(404).json({ error: "Anime not found" });
     } else {
       res.status(500).json({ error: "Internal Server Error" });
